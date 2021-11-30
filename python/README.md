@@ -70,6 +70,6 @@ FAILED example_test.py::ExampleTests::test_example - AssertionError: 4 != 5
 
 ## Using Docker
 
-This project has configuration to run in a Docker container. Use either `runshell.ps1` (for Powershell) or `runshell.sh` (for bash or bash-like) to start a docker container and open a command prompt. The `pytest` and `ptw` packages will already be available.
+This project has configuration to run in a Docker container. Use either `runshell.ps1` (for Powershell) or `runshell.sh` (for bash or bash-like) to start a docker container and open a command prompt. The `pytest` and `ptw` packages will already be installed and available.
 
 You will need a working [Docker installation](https://docs.docker.com/get-docker/).
