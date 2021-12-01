@@ -10,7 +10,8 @@ def part2(input):
     return count_of_increases(sums)
 
 def count_of_increases(measurements):
-    depth_increases = [True for (cur, prev) in zip(measurements[1:], measurements) if cur > prev]
+    pairs = zip(measurements[1:], measurements)
+    depth_increases = [True for (cur, prev) in pairs if cur > prev]
 
     return len(depth_increases)
 
