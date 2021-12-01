@@ -8,15 +8,25 @@ export function parseInput(input: string): number[] {
   return depths;
 }
 
+function calculateIncreases(values: number[]): number {
+  const pairs = _.zip(
+    values.slice(1),
+    values.slice(0, values.length - 1)
+  );
+
+  const increasesAndDecreases: boolean[] = pairs.map(
+    ([current, prev]) => current! > prev!);
+
+  const increases: boolean[] = increasesAndDecreases.filter(x => x);
+
+  return increases.length;
+
+}
+
 export function part1(input: string): number {
   const depths = parseInput(input);
 
-  const increases = _.zip(depths.slice(1), depths.slice(0, depths.length - 1))
-    .map(([current, prev]) => current! > prev!)
-    .filter(x => x)
-    ;
-
-	return increases.length;
+  return calculateIncreases(depths);
 }
 
 export function computePart2Sums(depths: number[]): number[] {
@@ -35,12 +45,7 @@ export function part2(input: string): number {
 
   const sums = computePart2Sums(depths);
 
-  const increases = _.zip(sums.slice(1), sums.slice(0, sums.length - 1))
-    .map(([current, prev]) => current! > prev!)
-    .filter(x => x)
-    ;
-
-	return increases.length;
+  return calculateIncreases(sums);
 }
 
 if(require.main === module) {
