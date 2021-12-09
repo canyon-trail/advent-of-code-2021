@@ -1,6 +1,33 @@
 import { readFileSync } from "fs";
 import _ from "lodash";
 
+/*
+labeling the segments based on numbers:
+ 0000
+1    2
+1    2
+ 3333
+4    5
+4    5
+ 6666
+*/
+const segmentPatterns = {
+  0: "1110111",
+  1: "0010010",
+  2: "1011101",
+  3: "1011011",
+  4: "0111001",
+  5: "1101011",
+  6: "1101111",
+  7: "1010010",
+  8: "1111111",
+  9: "1111011",
+}
+
+const numbersByPattern = _.invert(segmentPatterns)
+
+//function* permute()
+
 export function part1(input: string): number {
   const entries = input.split(/\r?\n/).filter(x => x.length > 0);
 
