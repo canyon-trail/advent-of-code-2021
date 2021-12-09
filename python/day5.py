@@ -68,7 +68,6 @@ def get_intersection_count(lines):
     for c in all_coords:
         counts[c] = counts.get(c, 0) + 1
     intersections = [k for k, count in counts.items() if count > 1]
-    print(intersections)
 
     return len(intersections)
 
