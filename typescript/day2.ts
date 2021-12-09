@@ -47,13 +47,13 @@ export class Forward extends InstructionBase implements Instruction {
 }
 
 export function part1(input: string): number {
-  const instructions = input.split("\n");
+  const rawInstructions = input.split("\n");
 
-  const offsets = instructions
+  const instructions = rawInstructions
     .filter(x => x.trim().length > 0)
     .map(x => parse(x));
 
-  var finalPoint = offsets.reduce(
+  var finalPoint = instructions.reduce(
     (pt, instr) => instr.reducePart1(pt),
     { x: 0, y: 0 });
 
