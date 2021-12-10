@@ -63,9 +63,3 @@ export function part2(input: string): number {
 
   return _.sum(sizes);
 }
-
-if(require.main === module) {
-  const input = readFileSync("day6.txt", { encoding: "ascii"});
-  console.log(`Day 6, part 1: ${part1(input)}`);
-  console.log(`Day 6, part 2: ${part2(input)}`);
-}

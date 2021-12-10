@@ -1,4 +1,3 @@
-import fs from 'fs';
 import _ from 'lodash';
 
 export function parseInput(input: string) {
@@ -85,10 +84,4 @@ export function part2(input: string) {
 	return (
 		parseDecimal(oxygenGeneratorRating) * parseDecimal(CO2ScrubberRating)
 	);
-}
-
-if (require.main === module) {
-	const input = fs.readFileSync('./day3.txt', 'utf-8');
-	console.log(`Day 3, Part 1: ${part1(input)}`);
-	console.log(`Day 3, Part 2: ${part2(input)}`);
 }

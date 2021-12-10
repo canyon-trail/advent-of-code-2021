@@ -1,4 +1,3 @@
-import { readFileSync } from "fs";
 import _ from "lodash";
 
 type Orientation =
@@ -94,10 +93,4 @@ export function part2(input: string): number {
   const intersectingPoints = findIntersections(lines);
 
   return intersectingPoints.length;
-}
-
-if(require.main === module) {
-  const input = readFileSync("day5.txt", { encoding: "ascii"});
-  console.log(`Day 5, part 1: ${part1(input)}`);
-  console.log(`Day 5, part 2: ${part2(input)}`);
 }

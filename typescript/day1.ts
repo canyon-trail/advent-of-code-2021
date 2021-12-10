@@ -1,4 +1,3 @@
-import { readFileSync } from "fs";
 import _ from "lodash";
 
 export function parseInput(input: string): number[] {
@@ -46,10 +45,4 @@ export function part2(input: string): number {
   const sums = computePart2Sums(depths);
 
   return calculateIncreases(sums);
-}
-
-if(require.main === module) {
-  const input = readFileSync("day1.txt", { encoding: "ascii"});
-  console.log(`Day 1, part 1: ${part1(input)}`);
-  console.log(`Day 1, part 2: ${part2(input)}`);
 }
