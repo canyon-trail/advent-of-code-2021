@@ -1,4 +1,5 @@
-import { part1, part2 } from './day8';
+import { sampleSize } from 'lodash';
+import { part1, part2, permute, findMapping, matchesMapping } from './day8';
 
 const sampleInput = `be cfbegad cbdgef fgaecd cgeb fdcge agebfd fecdb fabcd edb | fdgacbe cefdb cefbgd gcbe
 edbfga begcd cbg gc gcadebf fbgde acbgfd abcde gfcbed gfec | fcgedb cgb dgebacf gc
@@ -16,7 +17,50 @@ describe('day 8', () => {
     expect(part1(sampleInput)).toBe(26);
   });
 
-  xit('part 2, sample input', () => {
-    expect(part2(sampleInput)).toBe(5);
+  it('part 2, sample input', () => {
+    expect(part2(sampleInput)).toBe(61229);
+  });
+
+  it("should permute", () => {
+    const result = [...permute(new Set(['a', 'b', 'c']))]
+
+    expect(result).toEqual([
+      'abc',
+      'acb',
+      'bac',
+      'bca',
+      'cab',
+      'cba',
+    ].map(x => x.split('')));
+  });
+
+  it("should find mapping", () => {
+    const samples = "acedgfb cdfbe gcdfa fbcad dab cefabd cdfgeb eafb cagedb ab".split(" ")
+
+    expect(findMapping(samples)).toEqual({
+      d: 0,
+      e: 1,
+      a: 2,
+      f: 3,
+      g: 4,
+      b: 5,
+      c: 6,
+    })
+  });
+
+  describe("matchesMapping function", () => {
+    const samples = "acedgfb cdfbe gcdfa fbcad dab cefabd cdfgeb eafb cagedb ab".split(" ")
+    const mapping = {
+      d: 0,
+      e: 1,
+      a: 2,
+      f: 3,
+      g: 4,
+      b: 5,
+      c: 6,
+    }
+    samples.forEach(s => it(`should match mapping for ${s}`, () => {
+      expect(matchesMapping(s.split(""), mapping)).toBe(true);
+    }));
   });
 });
