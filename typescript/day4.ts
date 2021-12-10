@@ -1,4 +1,3 @@
-import { readFileSync } from "fs";
 import _ from "lodash";
 
 export class Board {
@@ -88,10 +87,4 @@ export function part2(input: string): number {
   }
 
   return lastScore;
-}
-
-if(require.main === module) {
-  const input = readFileSync("day4.txt", { encoding: "ascii"});
-  console.log(`Day 1, part 1: ${part1(input)}`);
-  console.log(`Day 1, part 2: ${part2(input)}`);
 }

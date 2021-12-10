@@ -48,9 +48,3 @@ export function part2(input: string): number {
 
   return _.min(totals)!;
 }
-
-if(require.main === module) {
-  const input = readFileSync("day7.txt", { encoding: "ascii"});
-  console.log(`Day 7, part 1: ${part1(input)}`);
-  console.log(`Day 7, part 2: ${part2(input)}`);
-}

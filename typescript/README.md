@@ -12,7 +12,9 @@ npm install
 
 ## Project Layout & Tutorial
 
-This project template has pairs of files, for instance, `day1.ts` and `day1.test.ts`. Running `day1.ts` via `npm start -- day1.ts` will produce the solution for the day 1 puzzle.
+This project template has pairs of files, for instance, `day1.ts` and `day1.test.ts`.
+Running `day1.ts` can be done via `npm start -- 1`; this will produce the solution
+for the day 1 puzzle. This requires that `day1.ts` exports functions called `part1` and `part2` that accept strings (the entire puzzle input) as the only parameter.
 Files here assume that puzzle input exists in files named `dayN.txt`. These `.txt` files are gitignored, since they'll be different for each person.
 
 You can also run tests using either `npm run test` or `npm run test:watch`:

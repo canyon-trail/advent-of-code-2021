@@ -1,5 +1,3 @@
-import { readFileSync } from "fs";
-
 export type Position = {
   x: number;
   y: number;
@@ -83,10 +81,4 @@ export function parse(instruction: string): Instruction {
   }
 
   throw new Error("Unexpected instruction " + instruction);
-}
-
-if(require.main === module) {
-  const input = readFileSync("day2.txt", { encoding: "ascii"});
-  console.log(`Day 2, part 1: ${part1(input)}`);
-  console.log(`Day 2, part 2: ${part2(input)}`);
 }
