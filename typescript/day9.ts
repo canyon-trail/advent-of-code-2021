@@ -1,4 +1,4 @@
-import _, { find } from "lodash";
+import _ from "lodash";
 
 export function createGrid(input: string): number[][] {
   const innerRows = input.split(/\r?\n/)
