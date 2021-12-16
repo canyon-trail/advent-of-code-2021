@@ -2,7 +2,7 @@ import { part1, part2, calculateMedian, computeFuel } from './day7';
 
 const sampleInput = `16,1,2,0,4,2,7,1,2,14`;
 
-describe('day 1', () => {
+describe('day 7', () => {
   it('calculates median', () => {
     const positions = sampleInput.split(",").map(x => parseInt(x));
 
