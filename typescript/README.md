@@ -1,6 +1,6 @@
 # Typescript Template
 
-This is a quick start template for typescript testing. See `example.test.ts` for a simple example test.
+This is a quick start template for typescript testing. See `day1.test.ts` for a simple example test.
 
 ## Installing and Running
 
