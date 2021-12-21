@@ -15,5 +15,8 @@
 		"test": "jest",
 		"test:watch": "jest --watch",
 		"start": "ts-node run.ts"
+	},
+	"dependencies": {
+		"typescript-parsec": "^0.3.2"
 	}
 }
