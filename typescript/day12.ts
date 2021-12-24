@@ -72,7 +72,6 @@ class CandidatePath {
       p.path = [...this.path, x.name];
       p.visited = new Set<string>(p.path);
       p.revisitedCave = this.revisitedCave;
-      p.part2 = this.part2;
       if(this.part2 && p.revisitedCave === null && this.visited.has(x.name) && x.isSmall) {
         p.revisitedCave = x.name;
       }

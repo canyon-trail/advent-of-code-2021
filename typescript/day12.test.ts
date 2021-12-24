@@ -38,7 +38,7 @@ zg-he
 pj-fs
 start-RW`;
 
-describe('day 1', () => {
+describe('day 12', () => {
   it("parses input", () => {
     const actual = parseInput(sampleInput1);
 
